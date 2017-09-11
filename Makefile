@@ -1,7 +1,7 @@
 IMAGE_NAME := davidgasquez/dbt:latest
 
 .DEFAULT_GOAL := run
-    
+
 .PHONY: build
 build:
 	docker build -t $(IMAGE_NAME) .
