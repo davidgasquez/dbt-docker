@@ -1,6 +1,6 @@
 IMAGE_NAME := davidgasquez/dbt:latest
 
-.DEFAULT_GOAL := run
+.DEFAULT_GOAL := version
 
 .PHONY: build
 build:
@@ -10,6 +10,6 @@ build:
 push:
 	docker push $(IMAGE_NAME)
 
-.PHONY: run
-run:
-	docker run --rm -it -v $(PWD):/dbt -v $(PWD)/sample.profiles.yml:/home/dbt/.dbt/profiles.yml --user 1000:1000 davidgasquez/dbt:latest
+.PHONY: version
+version:
+	docker run --rm -it -v $(PWD):/dbt -v $(HOME)/.dbt_profiles.yml:/home/dbt/.dbt/profiles.yml --user 1000:1000 davidgasquez/dbt:latest --version
