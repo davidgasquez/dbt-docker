@@ -15,7 +15,7 @@ RUN useradd -m -s /bin/bash -N -u 1000 $USER_NAME && \
     mkdir -p $DBT_DIR && \
     chown $USER_NAME $DBT_DIR
 
-RUN pip install dbt
+RUN pip install dbt==0.8.3
 
 WORKDIR $DBT_DIR
 
