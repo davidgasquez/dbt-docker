@@ -12,7 +12,7 @@ RUN apt-get update -y && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install DBT
-RUN pip install dbt==0.8.3
+RUN pip install dbt==0.10.0
 
 # Create dbt user with UID=1000 and in the 'users' group
 RUN useradd -m -s /bin/bash -N -u 1000 $USER_NAME && \
