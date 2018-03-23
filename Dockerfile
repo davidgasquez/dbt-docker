@@ -28,4 +28,4 @@ USER $USER_NAME
 WORKDIR $DBT_DIR
 
 # Run dbt
-ENTRYPOINT ["dbt"]
+CMD ["dbt"]
