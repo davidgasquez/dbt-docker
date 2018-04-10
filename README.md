@@ -1,5 +1,7 @@
 # Docker Image for DBT
 
+[![Build Status](https://travis-ci.org/davidgasquez/dbt-docker.svg?branch=master)](https://travis-ci.org/davidgasquez/dbt-docker)
+
 A Docker image for [dbt (data build tool)](https://github.com/fishtown-analytics/dbt).
 
 ## Requirements
