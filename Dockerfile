@@ -1,5 +1,6 @@
-FROM python
+FROM python:3.6
 
+# Set environment variables
 ENV USER_NAME dbt
 ENV DBT_DIR /dbt
 ENV DBT_CONFIG_DIR /home/dbt/.dbt

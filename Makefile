@@ -1,4 +1,5 @@
-IMAGE_NAME := davidgasquez/dbt:latest
+VERSION = 0.10.0
+IMAGE_NAME := davidgasquez/dbt:$(VERSION)
 
 .DEFAULT_GOAL := version
 
