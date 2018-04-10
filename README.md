@@ -27,3 +27,7 @@ alias ddbt='docker run --rm -it \
     --user 1000:1000 \
     davidgasquez/dbt:latest'
 ```
+
+## License
+
+MIT License Copyright (c) 2018 David Gasquez
