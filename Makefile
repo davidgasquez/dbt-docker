@@ -11,6 +11,10 @@ build:
 push:
 	docker push $(IMAGE_NAME)
 
+.PHONY: dev
+dev:
+	docker run --rm -it $(IMAGE_NAME) bash
+
 .PHONY: version
 version:
-	docker run --rm -it -v $(PWD):/dbt -v $(HOME)/.dbt_profiles.yml:/home/dbt/.dbt/profiles.yml --user 1000:1000 davidgasquez/dbt:latest dbt --version
+	docker run --rm -it $(IMAGE_NAME) dbt --version

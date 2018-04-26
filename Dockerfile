@@ -1,10 +1,5 @@
 FROM python:3.6
 
-# Set environment variables
-ENV USER_NAME dbt
-ENV DBT_DIR /dbt
-ENV DBT_CONFIG_DIR /home/dbt/.dbt
-
 # Update and install system packages
 RUN apt-get update -y && \
     apt-get install --no-install-recommends -y -q \
@@ -15,15 +10,8 @@ RUN apt-get update -y && \
 # Install DBT
 RUN pip install dbt==0.10.0
 
-# Create dbt user with UID=1000 and in the 'users' group
-RUN useradd -m -s /bin/bash -N -u 1000 $USER_NAME && \
-    mkdir -p $DBT_DIR && \
-    mkdir -p $DBT_CONFIG_DIR && \
-    chown --recursive $USER_NAME $DBT_DIR && \
-    chown --recursive $USER_NAME $DBT_CONFIG_DIR
-
-# Switch to the proper user
-USER $USER_NAME
+# Set environment variables
+ENV DBT_DIR /dbt
 
 # Set working directory
 WORKDIR $DBT_DIR
