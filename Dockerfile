@@ -8,7 +8,7 @@ RUN apt-get update -y && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install DBT
-RUN pip install dbt==0.12.0
+RUN pip install dbt==0.12.1
 
 # Set environment variables
 ENV DBT_DIR /dbt
