@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.6
 
 # Update and install system packages
 RUN apt-get update -y && \
