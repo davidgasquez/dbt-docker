@@ -1,15 +1,17 @@
 VERSION = 0.13.0
 IMAGE_NAME := davidgasquez/dbt:$(VERSION)
+IMAGE_NAME_LATEST := davidgasquez/dbt:latest
 
 .DEFAULT_GOAL := version
 
 .PHONY: build
 build:
-	docker build -t $(IMAGE_NAME) .
+	docker build -t $(IMAGE_NAME) -t $(IMAGE_NAME_LATEST) .
 
 .PHONY: push
 push:
 	docker push $(IMAGE_NAME)
+	docker push $(IMAGE_NAME_LATEST)
 
 .PHONY: dev
 dev:
