@@ -15,7 +15,7 @@ You can run the Dockerized `dbt` command excuting the following order:
 ```bash
 docker run --rm -it \
     -v $PWD:/dbt \
-    -v /path/to/your/profiles.yml:/home/dbt/.dbt/profiles.yml \
+    -v /path/to/your/profiles.yml:/root/.dbt/profiles.yml \
     davidgasquez/dbt:latest dbt run
 ```
 
