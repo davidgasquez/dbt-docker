@@ -1,4 +1,4 @@
-VERSION = 0.14.3
+VERSION = 0.14.4
 IMAGE_NAME := davidgasquez/dbt:$(VERSION)
 IMAGE_NAME_LATEST := davidgasquez/dbt:latest
 
@@ -6,7 +6,7 @@ IMAGE_NAME_LATEST := davidgasquez/dbt:latest
 
 .PHONY: build
 build:
-	docker build -t $(IMAGE_NAME) -t $(IMAGE_NAME_LATEST) .
+	docker build --no-cache -t $(IMAGE_NAME) -t $(IMAGE_NAME_LATEST) .
 
 .PHONY: push
 push:
