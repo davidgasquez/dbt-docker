@@ -1,4 +1,4 @@
-VERSION = 0.14.4
+VERSION = 0.15.0
 IMAGE_NAME := davidgasquez/dbt:$(VERSION)
 IMAGE_NAME_LATEST := davidgasquez/dbt:latest
 

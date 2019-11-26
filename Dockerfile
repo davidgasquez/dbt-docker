@@ -9,7 +9,7 @@ RUN apt-get update -y && \
 
 # Install DBT
 RUN pip install -U pip
-RUN pip install dbt==0.14.4
+RUN pip install dbt==0.15.0
 
 # Set environment variables
 ENV DBT_DIR /dbt
