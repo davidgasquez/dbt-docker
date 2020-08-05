@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.8.5
 
 # Update and install system packages
 RUN apt-get update -y && \
@@ -9,7 +9,7 @@ RUN apt-get update -y && \
 
 # Install DBT
 RUN pip install -U pip
-RUN pip install dbt==0.16.0
+RUN pip install dbt==0.17.2
 
 # Set environment variables
 ENV DBT_DIR /dbt
