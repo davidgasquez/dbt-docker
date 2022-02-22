@@ -1,6 +1,6 @@
 # Docker Image for DBT
 
-**Note**: This repository is now deprecated. Please use the official [`dbt` Docker images](https://github.com/fishtown-analytics/dbt/tree/dev/octavius-catto/docker)
+**Note**: This repository is now deprecated. Please use the official [`dbt` Docker images](https://github.com/dbt-labs/dbt-core/tree/main/docker)
 
 [![Build Status](https://travis-ci.org/davidgasquez/dbt-docker.svg?branch=master)](https://travis-ci.org/davidgasquez/dbt-docker)
 
